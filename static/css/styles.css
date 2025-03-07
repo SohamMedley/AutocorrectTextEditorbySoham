@@ -1,1 +1,140 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+:root {
+  --primary-color: #0057ff;
+  --primary-hover: #0041cc;
+  --text-color: #ffffff;
+  --background: #121212;
+  --card-background: #1e1e1e;
+  --border-color: #333333;
+  --accent-color: #ff3b30;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+}
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.gradient-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+.sphere-1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
+  top: -200px;
+  left: -150px;
+  animation: float1 20s ease-in-out infinite;
+}
+.sphere-2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
+  bottom: -150px;
+  right: -150px;
+  animation: float2 25s ease-in-out infinite;
+}
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(80px, 80px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-80px, -80px); }
+  100% { transform: translate(0, 0); }
+}
+.editor-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: var(--card-background);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.toggle-btn, .save-btn {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.toggle-btn:hover, .save-btn:hover {
+  background: var(--primary-hover);
+}
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.toolbar button {
+  background: var(--primary-color);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.toolbar button:hover {
+  background: var(--primary-hover);
+}
+.editor {
+  width: 100%;
+  min-height: 300px;
+  background: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  overflow-y: auto;
+  position: relative;
+}
+.editor:empty:before {
+  content: attr(data-placeholder);
+  color: var(--border-color);
+}
+.made-by {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
