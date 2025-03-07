@@ -62,8 +62,5 @@ text-editor/
 - **Python (Flask)**
 - **Autocorrect Package**
 
-## About the Developer
-
-This project was developed by **Soham**. It represents a blend of modern design and smart functionality aimed at creating a seamless text editing experience.
 
 
