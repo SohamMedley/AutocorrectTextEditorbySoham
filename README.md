@@ -1,4 +1,4 @@
-```md
+
 # Smart Text Editor
 
 Smart Text Editor is a modern, premium text editor with live autocorrect, spell-check, and grammar suggestions built with HTML, CSS, JavaScript, and Python (Flask). This project features a sleek dark theme with red, blue, and black accents.
@@ -23,7 +23,7 @@ Smart Text Editor offers a rich text editing experience with:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/smart-text-editor.git
-   ```
+
 2. **Navigate to the Project Directory:**
    ```bash
    cd smart-text-editor
