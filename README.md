@@ -1,3 +1,4 @@
+```md
 # Smart Text Editor
 
 Smart Text Editor is a modern, premium text editor with live autocorrect, spell-check, and grammar suggestions built with HTML, CSS, JavaScript, and Python (Flask). This project features a sleek dark theme with red, blue, and black accents.
@@ -22,3 +23,54 @@ Smart Text Editor offers a rich text editing experience with:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/smart-text-editor.git
+   ```
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd smart-text-editor
+   ```
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run the Flask Server:**
+   ```bash
+   python server.py
+   ```
+5. **Open Your Browser:**
+   Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the editor.
+
+## Project Structure
+
+```
+text-editor/
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
+├── templates/
+│   └── index.html
+├── server.py
+├── requirements.txt
+└── README.md
+```
+
+## Technologies Used
+
+- **HTML5 & CSS3**
+- **JavaScript (ES6)**
+- **Python (Flask)**
+- **Autocorrect Package**
+
+## About the Developer
+
+This project was developed by **Soham**, a Computer Engineering student at **DY Patil College**, for his friend **Raj**. It represents a blend of modern design and smart functionality aimed at creating a seamless text editing experience.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Thank you for checking out my project!
+```
