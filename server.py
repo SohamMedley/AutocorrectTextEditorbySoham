@@ -4,6 +4,7 @@ import re
 
 app = Flask(__name__)
 spell = Speller(lang='en')
+
 whitelist = {
     "raj": "Raj",
     "soham": "Soham",
