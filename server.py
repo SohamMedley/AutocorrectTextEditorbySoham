@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from autocorrect import Speller
 import re
+import os
 
 app = Flask(__name__)
 spell = Speller(lang='en')
@@ -64,4 +65,5 @@ def autocorrect_route():
     return jsonify({"correctedText": corrected_text})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Use the PORT provided by Render
+    app.run(host='0.0.0.0', port=port, debug=True)  # Bind to 0.0.0.0 for Render deployment
