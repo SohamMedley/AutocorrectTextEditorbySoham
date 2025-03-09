@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Text Editor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="animated-background">
+    <div class="gradient-sphere sphere-1"></div>
+    <div class="gradient-sphere sphere-2"></div>
+  </div>
+  <div class="editor-container">
+    <header>
+      <h1>Smart Text Editor</h1>
+      <div class="header-buttons">
+        <button id="toggleAutocorrect" class="toggle-btn">Autocorrect: ON</button>
+        <button id="saveBtn" class="save-btn">Save File</button>
+      </div>
+    </header>
+    <div class="toolbar">
+      <button onclick="formatText('bold')"><strong>B</strong></button>
+      <button onclick="formatText('italic')"><em>I</em></button>
+      <button onclick="formatText('underline')"><u>U</u></button>
+    </div>
+    <div id="editor" class="editor" contenteditable="true" data-placeholder="Type your text here..."></div>
+    <div class="made-by">Made by Raj</div>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
